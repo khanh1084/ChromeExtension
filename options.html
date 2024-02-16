@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background: #fff;
+        width: 300px;
+        box-sizing: border-box;
+      }
+      form,
+      button,
+      input[type="file"] {
+        display: block;
+        margin: 10px 0;
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      input[type="text"],
+      input[type="submit"],
+      button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 5px;
+        margin-bottom: 3px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Options</h1>
+      <h3>Add to database</h3>
+      <form id="addForm">
+        <label for="id">ID:</label><br />
+        <input type="text" id="id" name="id" /><br />
+        <label for="device">Device:</label><br />
+        <input type="text" id="device" name="device" /><br />
+        <input type="submit" value="Add" />
+      </form>
+      <button type="button" id="clear">Clear Database</button>
+      <h3>Or upload a json file</h3>
+      <input type="file" id="jsonFile" accept=".json" />
+      <script src="options.js"></script>
+    </div>
+  </body>
+</html>
