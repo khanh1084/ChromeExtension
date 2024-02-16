@@ -8,5 +8,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       }
       parent.removeChild(markedElements[0]);
     }
+    console.log("Highlight was removed.");
   }
 });
