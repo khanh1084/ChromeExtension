@@ -9,6 +9,7 @@ document.getElementById("addForm").addEventListener("submit", function (event) {
       alert("Added successfully!");
       document.getElementById("id").value = "";
       document.getElementById("device").value = "";
+      location.reload();
     });
   });
 });
@@ -16,6 +17,7 @@ document.getElementById("addForm").addEventListener("submit", function (event) {
 document.getElementById("clear").addEventListener("click", function () {
   chrome.storage.sync.clear(function () {
     alert("Database cleared!");
+    location.reload();
   });
 });
 
@@ -43,6 +45,7 @@ document
             return;
           }
           alert("Database updated!");
+          location.reload();
         });
       });
     };
